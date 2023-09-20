@@ -352,6 +352,112 @@ header {
 }
 /************************************ Main-menu Section End ********************************************/
 
+/************************************ Contact Section Start ********************************************/
+
+#show-contact-form {
+    position: fixed;
+    top: 150px;
+    z-index: 999;
+    padding: 8px 4px;
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3991f0; 
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+/* Show contact-form when hovering show-contact-form */
+#contact-container:hover #show-contact-form,
+#contact-container:hover #form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.input-container label {
+    padding-left: 12px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: rgb(92,90,90);
+}
+
+.input-container input {
+    border-radius: 24px ;
+    background-color: #fff;
+    height: 36px;
+    border: 1px solid #dce2e2;
+    background-color: #f9f9f9;
+    font-size: 13px;
+    color: #000;
+    padding: 0 15px;
+    line-height: 1.2;
+    max-width: 100%;
+
+}
+
+.input-container textarea {
+    border-radius: 10px;
+    border: 0px;
+    font-family: Poppins;
+    padding: 10px 0 0 15px;
+    resize: none;
+
+}
+
+.input-container input:focus, textarea:focus {
+    outline: 1px solid rgb(140, 210, 238);
+    background-color: rgb(237, 244, 247);
+}
+
+.input-container .submit-btn {
+    color: #fff; 
+    font-weight: bold;
+    background-color: #007bff; 
+    margin-top:5px
+}
+
+.input-container .submit-btn:checked {
+    color:#000
+}
+
+/* form-container before hovering */
+#form-container {
+    display: none;
+    transition: transform 0.8s , visibility 0.5s;
+	transform:scale(0);
+    opacity: 0;
+}
+
+/* form-container after hovering */
+#form-container {
+    opacity: 1;
+    transform: scale(1);
+    position: fixed;
+    top: 140px;
+    width: 330px;
+    height: 390px;
+    padding: 0 15px 15px 15px;
+    border: 1px solid #e8eaec;
+    border-radius: 10px;
+    color: #474646;
+    background-color: #badbf1;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgb(89, 172, 211),
+                -2px -2px 4px rgb(255, 255, 255);   
+    
+}
+/************************************ Contact Section End *******************************************/
+
 /************************************ Home Section Start ********************************************/
 
 .home-section {
@@ -397,6 +503,20 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     word-spacing: 1.8px;
+}
+
+.text-overlay a {
+    padding: 8px 12px;
+    background-color: rgba(245, 229, 4, 0.801); 
+    border: 1px  solid rgba(245, 229, 4, 0.801); 
+    border-radius: 2px;
+    text-decoration: none;
+    width: 100px;
+    margin-top: 15px
+}
+
+a:visited {
+    color: black
 }
 
 /************************************ Home Section End ************************************** */
@@ -565,17 +685,16 @@ header {
     bottom: 15px;
     margin: 0 5px
 }
-
-
 /************************************ Categories Section End *************************************/
 
-/* why us section start */
+/************************************ why us section start ***************************************/
 .whyus-container {
     display:flex;
     justify-content: center;
     align-items: center;
     margin: 85px 0;
 }
+
 .whyus-item{
     padding: 12px;
     text-align: center;
@@ -585,11 +704,13 @@ header {
 .last-item{
     border:0;
 }
+
 .whyus-body h3{
     font-size: 17px;
     font-weight: 500;
     margin-top: 5px;
 }
+
 .whyus-body span{
     color: rgb(100, 100, 100);
 }
@@ -659,12 +780,14 @@ header {
     opacity: 0.9;
     transition: transform 0.2s;
 }
+
 .featured-img-overlay ul{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .featured-img-overlay ul li{
     width: 40px;
     height: 40px;
@@ -672,6 +795,7 @@ header {
     display: inline-block;
     text-align: center;
 }
+
 .featured-img-overlay ul li i{
     color: #fff;
     line-height: 40px;
@@ -684,6 +808,7 @@ header {
 .featured-item:hover .hover-effect {
     opacity: 0.2;
 }
+
 .featured-item .active{
     color: rgb(213, 216, 49);
 }
@@ -697,111 +822,5 @@ header {
     color: rgb(255, 79, 10)
 }
 /*************************************** Featured Section End *****************************************/
-
-/* Contact Start */
-
-#show-contact-form {
-    position: fixed;
-    top: 150px;
-    z-index: 999;
-    padding: 8px 4px;
-    border: 1px solid;
-    border-radius: 10px 0 0 10px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #3991f0; 
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
-}
-
-/* Show contact-form when hovering show-contact-form */
-#contact-container:hover #show-contact-form,
-#contact-container:hover #form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.input-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-}
-
-.input-container label {
-    padding-left: 12px;
-    padding-bottom: 2px;
-    font-size: 14px;
-    color: rgb(92,90,90);
-}
-
-.input-container input {
-    border-radius: 24px ;
-    background-color: #fff;
-    height: 36px;
-    border: 1px solid #dce2e2;
-    background-color: #f9f9f9;
-    font-size: 13px;
-    color: #000;
-    padding: 0 15px;
-    line-height: 1.2;
-    max-width: 100%;
-
-}
-
-.input-container textarea {
-    border-radius: 10px;
-    border: 0px;
-    font-family: Poppins;
-    padding: 10px 0 0 15px;
-    resize: none;
-
-}
-
-.input-container input:focus, textarea:focus {
-    outline: 1px solid rgb(140, 210, 238);
-    background-color: rgb(237, 244, 247);
-}
-
-.input-container .submit-btn {
-    color: #fff; 
-    font-weight: bold;
-    background-color: #007bff; 
-    margin-top:5px
-}
-
-.input-container .submit-btn:checked {
-    color:#000
-}
-
-/* form-container before hovering */
-#form-container {
-    display: none;
-    transition: transform 0.8s , visibility 0.5s;
-	transform:scale(0);
-    opacity: 0;
-}
-
-/* form-container after hovering */
-#form-container {
-    opacity: 1;
-    transform: scale(1);
-    position: fixed;
-    top: 140px;
-    width: 330px;
-    height: 390px;
-    padding: 0 15px 15px 15px;
-    border: 1px solid #e8eaec;
-    border-radius: 10px;
-    color: #474646;
-    background-color: #badbf1;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgb(89, 172, 211),
-                -2px -2px 4px rgb(255, 255, 255);   
-    
-}
-/* Contact us End */
 
 
