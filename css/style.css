@@ -774,11 +774,14 @@ a:visited {
 
 .featured-img-overlay{
     position: absolute;
-    top: 12%;
-    left: 14%;
+    top: 15%;
+    left: 17%;
+    width: 60%;
     transform:scalex(0);
     opacity: 0.9;
     transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
 }
 
 .featured-img-overlay ul{
@@ -821,6 +824,20 @@ a:visited {
     font-size: 28px;
     color: rgb(255, 79, 10)
 }
+
+@media (max-width: 1000px ){
+    .featured-item {
+        width: 44%;
+    }
+}
+
+@media (max-width: 768px){
+   .featured-item {
+        width: 90%;
+   }
+}
+
+
 /*************************************** Featured Section End *****************************************/
 
 
