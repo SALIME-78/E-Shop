@@ -178,6 +178,10 @@ header {
     color: #1f1e1e;
 }
 
+@media (max-width: 650px) {
+
+}
+
 /********************************** Header Section End ******************************************/
 
 /********************************** Main-menu Section Start *************************************/
@@ -191,6 +195,10 @@ header {
 
     display: flex;
     justify-content: center;
+}
+
+.mainmenu ul {
+    display: flex
 }
 
 .mainmenu ul li{
@@ -262,6 +270,7 @@ header {
 	opacity:0;
 	visibility:hidden;
 	z-index:5000;
+    display: flex
 }
 .mainmenu ul li:hover .megamenu{
 	opacity:1;
@@ -269,9 +278,6 @@ header {
 	visibility:visible;
 }
 
-.mainmenu ul li .megamenu {
-    display: flex
-}
 .mainmenu ul li .megamenu span{
 	width:33.3%;
 	padding:0 18px;
@@ -297,7 +303,7 @@ header {
 	transition:none;
 }
 .mainmenu ul li .megamenu2{
-	width:800px!important;
+	width:800px ;
 	left:-30px;
 }
 .mainmenu ul li .megamenu2 span{
@@ -345,9 +351,27 @@ header {
 
 /* end-megamenu */
 
-@media screen and (max-width: 768px) {
-    .mainmenu-container {
+@media screen and (max-width: 968px) {
+    .mainmenu ul {
         flex-direction: column;
+    }
+
+    .megamenu {
+        flex-direction: column;
+        width: 250px;
+    }
+
+    .mainmenu ul li .megamenu2 {
+        width: 220px;
+        margin-bottom: 15px;
+    }
+
+    .mainmenu ul li .megamenu2 span{
+        width:98%;
+    }
+
+    .show-border, .mainmenu ul li a {
+        padding-left: 0;
     }
 }
 /************************************ Main-menu Section End ********************************************/
@@ -519,12 +543,17 @@ a:visited {
     color: black
 }
 
+@media (max-width: 1150px){
+    .text-overlay {
+        display: none;
+    }
+}
+
 /************************************ Home Section End ************************************** */
 
 /************************************ Categories Section Start ***********************************/
 .category-section {
     width: 100%;
-    margin-bottom: 60px;
     margin: auto
 }
 
@@ -605,8 +634,11 @@ a:visited {
     line-height: 1.5
 }
 
-.card-6, .card-7 {
+.card-6 {
     grid-area: item6;
+}
+
+.card-6, .card-7 {
     transition: 0.7s;
     background-color: #a6d3f1;
     display: flex;
@@ -685,6 +717,40 @@ a:visited {
     bottom: 15px;
     margin: 0 5px
 }
+
+@media (max-width:1100px) {
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "item1 item2 item3"
+                             "item5 item5 item4"
+                             "item6 . item7"
+    }
+}
+
+@media (max-width: 850px){
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "item1 item2"
+                             "item3 item4"
+                             "item5 item5"
+                             "item6 item7"
+    }
+    
+}
+
+@media (max-width: 568px){
+    .category-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "item1"
+                             "item2"
+                             "item3"
+                             "item4"
+                             "item5"
+                             "item6"
+                             "item7"
+    }
+    
+}
 /************************************ Categories Section End *************************************/
 
 /************************************ why us section start ***************************************/
@@ -724,7 +790,20 @@ a:visited {
     transform: translateY(-12px);
 }
 
-/************************************ why us section start ***************************************/
+@media (max-width: 768px) {
+    .whyus-container {
+        flex-direction: column;
+        margin-bottom: 50px
+
+    }
+
+    .whyus-item {
+        border-right: none;
+        margin-top: 15px
+    }
+}
+
+/************************************ why us section end ***************************************/
 
 /************************************ Featured Section Start *************************************/
 .featured {
@@ -774,7 +853,7 @@ a:visited {
 
 .featured-img-overlay{
     position: absolute;
-    top: 15%;
+    top: 13%;
     left: 17%;
     width: 60%;
     transform:scalex(0);
@@ -831,8 +910,8 @@ a:visited {
     }
 }
 
-@media (max-width: 900px){
-   .featured-item {
+@media (max-width: 768px){
+    .featured-item {
         width: 90%;
    }
 }
