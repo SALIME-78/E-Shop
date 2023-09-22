@@ -9,15 +9,17 @@ body {
     height: 100vh;
 }
 
+/********************************** Header Section Start ******************************************/
+
 header {
     height: 80px;
 }
 
-/********************************** Header Section Start ******************************************/
 .header-container {
     width: 88%;
     height: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -178,8 +180,25 @@ header {
     color: #1f1e1e;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
 
+    .logo {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 23% !important;
+    }
+
+    .search-form-container {
+        width: 65%;
+    }
+
+    .top-navigation {
+        padding-right: 0;
+    }
+
+    
 }
 
 /********************************** Header Section End ******************************************/
@@ -352,6 +371,10 @@ header {
 /* end-megamenu */
 
 @media screen and (max-width: 968px) {
+
+    .mainmenu {
+        margin-top: 70px
+    }
     .mainmenu ul {
         flex-direction: column;
     }
