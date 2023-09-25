@@ -191,10 +191,11 @@ header {
     }
 
     .search-form-container {
-        width: 64%;
+        width: 60%;
     }
 
     .top-navigation {
+        width: 36%;
         margin-left: 15px;
         padding-right: 0;
     }
