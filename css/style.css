@@ -195,12 +195,10 @@ header {
     }
 
     .top-navigation {
-        width: 34%;
+        width: 34.3%;
         margin-left: 15px;
         padding-right: 0;
     }
-
-   
     
 }
 
@@ -504,6 +502,10 @@ header {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgb(89, 172, 211),
                 -2px -2px 4px rgb(255, 255, 255);   
+    
+}
+
+@media (max-width:600px){
     
 }
 /************************************ Contact Section End *******************************************/
